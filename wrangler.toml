@@ -1,0 +1,20 @@
+name = "claude-max-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV namespace for storing refreshed tokens
+# Created automatically during one-click deploy or manually via:
+# wrangler kv namespace create TOKEN_STORE
+[[kv_namespaces]]
+binding = "TOKEN_STORE"
+id = "" # Set after creating namespace, or leave empty for one-click deploy
+
+[vars]
+# Claude Code OAuth client ID (public, same for everyone)
+CLAUDE_OAUTH_CLIENT_ID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
+
+# Secrets (set via wrangler secret put):
+# - CLAUDE_ACCESS_TOKEN: OAuth access token from login
+# - CLAUDE_REFRESH_TOKEN: OAuth refresh token from login
+# - PROXY_SECRET: Your secret key to authenticate requests to this proxy

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://workers.cloudflare.com/deploy.json",
+  "name": "claude-max-proxy",
+  "description": "Proxy Anthropic API using your Claude Max/Pro subscription OAuth tokens",
+  "repository": "https://github.com/h1n054ur/claude-max-proxy",
+  "kv_namespaces": [
+    {
+      "binding": "TOKEN_STORE",
+      "description": "KV namespace for storing refreshed OAuth tokens"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "CLAUDE_ACCESS_TOKEN",
+      "description": "OAuth access token from Claude login (run: node scripts/oauth-login.js)"
+    },
+    {
+      "name": "CLAUDE_REFRESH_TOKEN",
+      "description": "OAuth refresh token from Claude login"
+    },
+    {
+      "name": "PROXY_SECRET",
+      "description": "Your secret key to authenticate requests to this proxy"
+    }
+  ]
+}
