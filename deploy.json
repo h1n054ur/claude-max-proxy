@@ -3,12 +3,6 @@
   "name": "claude-max-proxy",
   "description": "Proxy Anthropic API using your Claude Max/Pro subscription OAuth tokens",
   "repository": "https://github.com/h1n054ur/claude-max-proxy",
-  "kv_namespaces": [
-    {
-      "binding": "TOKEN_STORE",
-      "description": "KV namespace for storing refreshed OAuth tokens"
-    }
-  ],
   "secrets": [
     {
       "name": "CLAUDE_ACCESS_TOKEN",

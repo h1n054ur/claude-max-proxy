@@ -4,11 +4,9 @@ compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 # KV namespace for storing refreshed tokens
-# Created automatically during one-click deploy or manually via:
-# wrangler kv namespace create TOKEN_STORE
+# Automatically provisioned on first deploy (no id needed)
 [[kv_namespaces]]
 binding = "TOKEN_STORE"
-id = "" # Set after creating namespace, or leave empty for one-click deploy
 
 [vars]
 # Claude Code OAuth client ID (public, same for everyone)
