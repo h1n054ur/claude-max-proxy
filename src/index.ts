@@ -344,10 +344,11 @@ async function handleModels(): Promise<Response> {
   const models = {
     object: "list",
     data: [
-      { id: "claude-sonnet-4-20250514", object: "model", owned_by: "anthropic" },
+      { id: "claude-opus-4-6", object: "model", owned_by: "anthropic" },
+      { id: "claude-sonnet-4-6", object: "model", owned_by: "anthropic" },
+      { id: "claude-haiku-4-5", object: "model", owned_by: "anthropic" },
       { id: "claude-opus-4-20250514", object: "model", owned_by: "anthropic" },
-      { id: "claude-3-5-sonnet-20241022", object: "model", owned_by: "anthropic" },
-      { id: "claude-3-5-haiku-20241022", object: "model", owned_by: "anthropic" },
+      { id: "claude-sonnet-4-20250514", object: "model", owned_by: "anthropic" },
     ],
   };
   return new Response(JSON.stringify(models), {
